@@ -1,2 +1,3 @@
-# DSA Group Assignments
- A collaborative repository for Data Structures and Algorithms (DSA) assignments and projects. This space is dedicated to our class's collective efforts to explore, learn, and implement various DSA concepts.  Contributions Welcome! Feel free to fork, clone, and contribute to the projects. Let's learn and grow together!
+# DSA Group Assignments 1
+A C program that calculates the average of marks got by a student in three subjects ie Physics, Chemistry, Math...assume for each subject, four different tests were conducted; assignment, Course work, mid term and end of term exams
+![alt text](image.png)
