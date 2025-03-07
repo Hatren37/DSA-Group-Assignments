@@ -1,62 +1,50 @@
 #include <stdio.h>
-
 int main() {
-    // Variables to store marks for each subject (as integers)
-    int physics_assignment, physics_coursework, physics_midterm, physics_endterm;
-    int chemistry_assignment, chemistry_coursework, chemistry_midterm, chemistry_endterm;
-    int math_assignment, math_coursework, math_midterm, math_endterm;
-
-    // Variables to store the average marks for each subject
-    float physics_average, chemistry_average, math_average;
-    float overall_average;
-
+    // Declare variables for marks of each subject
+    float physicsMarks[4], chemistryMarks[4], mathMarks[4];
+    float avgPhysics, avgChemistry, avgMath;
+    float totalMarksPhysics = 0, totalMarksChemistry = 0, totalMarksMath = 0;
+    
     // Input marks for Physics
-    printf("Enter marks for Physics:\n");
-    printf("Assignment: ");
-    scanf("%d", &physics_assignment);
-    printf("Course Work: ");
-    scanf("%d", &physics_coursework);
-    printf("Mid Term: ");
-    scanf("%d", &physics_midterm);
-    printf("End of Term: ");
-    scanf("%d", &physics_endterm);
-
+    printf("Enter marks for Physics (Assignment, Coursework, Mid-term, End-of-term):\n");
+    for (int i = 0; i < 4; i++) {
+        printf("Test %d: ", i+1);
+        scanf("%f", &physicsMarks[i]);
+        totalMarksPhysics += physicsMarks[i];
+    }
+    
     // Input marks for Chemistry
-    printf("\nEnter marks for Chemistry:\n");
-    printf("Assignment: ");
-    scanf("%d", &chemistry_assignment);
-    printf("Course Work: ");
-    scanf("%d", &chemistry_coursework);
-    printf("Mid Term: ");
-    scanf("%d", &chemistry_midterm);
-    printf("End of Term: ");
-    scanf("%d", &chemistry_endterm);
-
+    printf("Enter marks for Chemistry (Assignment, Coursework, Mid-term, End-of-term):\n");
+    for (int i = 0; i < 4; i++) {
+        printf("Test %d: ", i+1);
+        scanf("%f", &chemistryMarks[i]);
+        totalMarksChemistry += chemistryMarks[i];
+    }
+    
     // Input marks for Math
-    printf("\nEnter marks for Math:\n");
-    printf("Assignment: ");
-    scanf("%d", &math_assignment);
-    printf("Course Work: ");
-    scanf("%d", &math_coursework);
-    printf("Mid Term: ");
-    scanf("%d", &math_midterm);
-    printf("End of Term: ");
-    scanf("%d", &math_endterm);
+    printf("Enter marks for Math (Assignment, Coursework, Mid-term, End-of-term):\n");
+    for (int i = 0; i < 4; i++) {
+        printf("Test %d: ", i+1);
+        scanf("%f", &mathMarks[i]);
+        totalMarksMath += mathMarks[i];
+    }
+    
+    // Calculate averages
+    avgPhysics = totalMarksPhysics / 4;
+    avgChemistry = totalMarksChemistry / 4;
+    avgMath = totalMarksMath / 4;
 
-    // Calculate average marks for each subject
-    physics_average = (physics_assignment + physics_coursework + physics_midterm + physics_endterm) / 4.0f;
-    chemistry_average = (chemistry_assignment + chemistry_coursework + chemistry_midterm + chemistry_endterm) / 4.0f;
-    math_average = (math_assignment + math_coursework + math_midterm + math_endterm) / 4.0f;
+    // Output the average marks for each subject
+    printf("\nAverage marks for Physics: %.2f\n", avgPhysics);
+    printf("Average marks for Chemistry: %.2f\n", avgChemistry);
+    printf("Average marks for Math: %.2f\n", avgMath);
 
-    // Calculate overall average
-    overall_average = (physics_average + chemistry_average + math_average) / 3.0f;
+    // Overall average
+    float overallAverage = (avgPhysics + avgChemistry + avgMath) / 3;
+    printf("\nOverall average marks: %.2f\n", overallAverage);
 
-    // Display the results
-    printf("\nAverage Marks:\n");
-    printf("Physics: %.2f\n", physics_average);
-    printf("Chemistry: %.2f\n", chemistry_average);
-    printf("Math: %.2f\n", math_average);
-    printf("\nOverall Average: %.2f\n", overall_average);
+
+
 
     return 0;
 }
