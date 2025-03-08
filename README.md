@@ -1,6 +1,6 @@
 # DSA Group Assignments 2
 Write an algorithm to swap 2 numbers entered by the user?
-                        <u>ANSWER</u>
+                        # ANSWER #
 An Algorithm Store Two Numbers Entered by the User.
 Steps:
 Start.
